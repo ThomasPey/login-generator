@@ -55,4 +55,5 @@ public class LoginServiceTest {
         allLogins = ls.findAllLogins();
         Assert.assertEquals(2,allLogins.size());
     }
+
 }
