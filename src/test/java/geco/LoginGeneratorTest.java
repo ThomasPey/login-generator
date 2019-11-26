@@ -18,6 +18,7 @@ public class LoginGeneratorTest {
 
     @Test
     public void generateLoginForNomAndPrenom() {
+        /* CT1 */
         String login = aLoginGenerator.generateLoginForNomAndPrenom("Durand","Paul");
         Assert.assertEquals("PDUR",login);
     }
