@@ -21,5 +21,8 @@ public class LoginGeneratorTest {
         /* CT1 */
         String login = aLoginGenerator.generateLoginForNomAndPrenom("Durand","Paul");
         Assert.assertEquals("PDUR",login);
+
+        String login2 = aLoginGenerator.generateLoginForNomAndPrenom("Ralouf","John");
+        Assert.assertEquals("JRAL2",login2);
     }
 }

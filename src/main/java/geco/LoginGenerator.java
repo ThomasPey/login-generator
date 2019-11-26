@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 public class LoginGenerator {
 
     private LoginService loginService;
+    private int i;
 
     /**
      * Construit un login generator
@@ -37,8 +38,12 @@ public class LoginGenerator {
         String p = deAccent(prenom.substring(0,1).toUpperCase());
         String n = deAccent(nom.substring(0,3).toUpperCase());
         String login = p+n ;
+        i = 1;
         if (loginService.loginExists(login)) {
-            login = login + "1" ;
+            while (loginService.loginExists(login + i)) {
+                i++;
+            }
+            login = login + i;
         }
         loginService.addLogin(login);
         return login;
